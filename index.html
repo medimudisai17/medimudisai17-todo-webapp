@@ -74,6 +74,16 @@
     font-size: 30px;
     animation: fall 6s linear infinite;
   }
+  body {
+  margin: 0;
+  min-height: 100vh;   /* allow content to grow */
+  overflow-x: hidden;  /* prevent sideways scroll only */
+  font-family: 'Comic Sans MS', cursive;
+}
+  p.love-text {
+  color: white;
+}
+
   @keyframes fall {
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
     100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
@@ -286,8 +296,10 @@ body {
   }
 </script>
 
+
 </body>
 </html>
+
 
 
 
