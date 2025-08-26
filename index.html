@@ -138,15 +138,28 @@
     font-size: 34px; color: #fff; font-weight: bold;
     animation: fadeIn 2s ease-in-out; max-width: 90%;
   }
-   }.love-text {
-  font-size: 20px;   /* normal size */
-  color: #ffffff;    /* white color */
-  font-weight: normal; /* remove bold */
-  line-height: 1.6;  /* add spacing for readability */
-  text-align: left;  /* optional: align left */
-  max-width: 90%;
-  margin: auto;
-}s
+/* Page load zoom-in effect */
+body {
+  animation: zoomInPage 1s ease forwards;
+  transform-origin: center center;
+}
+
+@keyframes zoomInPage {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* Zoom pulse when tapped */
+.zoom-effect {
+  animation: zoomTap 0.4s ease;
+}
+
+@keyframes zoomTap {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 </style>
 </head>
 <body>
@@ -275,6 +288,7 @@
 
 </body>
 </html>
+
 
 
 
